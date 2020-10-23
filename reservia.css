@@ -36,7 +36,7 @@ header, section {
     display: flex;
     flex-wrap: wrap;
 }
-.header ul, .search__nav__list, article, .hosting, .activities {
+.header ul, .search__nav__list, article {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -158,8 +158,16 @@ section, #accommodation, #interests, .menu {
     margin-right: 30px;
     margin-top: 20px;
 }
-#accommodation h3, #interests h3, aside h3 {
-    padding: 0 0 20px 20px;
+#accommodation h3, #interests h3 {
+    padding: 0 0 10px 40px;
+}
+aside h3 {
+    padding: 0 0 10px 20px;
+}
+.hosting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .hosting__infos, .hosting__aside__infos {
     background-color: white;
@@ -167,7 +175,7 @@ section, #accommodation, #interests, .menu {
     border: 5px solid white;
 }
 .hosting__infos {  
-    margin: 0 0 30px 0;
+    margin: 0 20px 30px 20px;
     padding-bottom: 6px;
 }
 .hosting__infos img {
@@ -188,7 +196,7 @@ figcaption {
 .hosting__more a {
     font-size: 16px;
     font-weight: bold;
-    margin-left: 30px;
+    margin-left: 40px;
 }
 aside {
     padding: 20px;
@@ -197,6 +205,7 @@ aside {
     margin-top: 20px;
 } 
 .hosting__aside {
+    justify-content: space-between;
     align-items: baseline;
     margin-right: 30px;
 }
@@ -229,10 +238,19 @@ aside {
     padding-top: 5px;
 }
 .activities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 50px;
+}
+.activities__block3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .activities__block2 {  
     flex-flow: column wrap;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .activities a {
     font-weight: bold;
@@ -251,7 +269,8 @@ aside {
 }
 .activities__card__large {   
     height: 420px;
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
 }  
 .activities__card__large img{
     height: 360px;
@@ -287,7 +306,7 @@ footer {
     margin: 5px 0 5px 0;
 }
 
-@media all and (max-width: 425px)
+@media all and (max-width: 743px)
 {
         header {
             margin-bottom: 90px;
@@ -302,18 +321,19 @@ footer {
             position: absolute;
         }
         .header img {
+            left: 20px;
             top: 20px;
         }
        .header__hosting {
-            left: 30px;
-            top: 80px;
+            left: 40px;
+            top: 90px;
         }
         .header__activities {
-            right: 50px;
-            top: 80px;
+            right: 40px;
+            top: 90px;
         }
         .header__register {
-            right: 50px;
+            right: 20px;
             top: 40px;
         }
         .header ul li a:hover {
@@ -323,11 +343,13 @@ footer {
             border-bottom: 2px solid #0065FC;
             padding: 0 22px 20px 22px;
         }
-        .search {
-            margin: 20px 10px 0 10px;
-        } 
         .search__title, .search__output {
             text-align: center;
+            margin-top: 20px;
+        }
+        .search__title {
+            margin-left: 20px;
+            margin-right: 20px;
         }
         .search__form {
             justify-content: center;
@@ -336,7 +358,7 @@ footer {
             width: 60%;
         }
         .search__form__submit__input__btn {
-            display: inline-flex;
+            display: flex;
         }
         .search__form__submit__input {
             display: none;
@@ -346,11 +368,8 @@ footer {
         }
         .search__nav__list {
             width: 75%;
-            flex-direction: column;
-            margin-top: 10px;
-        }
-        .search__nav__list ul {
-            padding-left: 0;
+            flex-direction: column;    
+            align-content: center;
         }
         .search__nav__item a {
             font-size: 16px;
@@ -371,7 +390,7 @@ footer {
         }  
         .hosting__infos {
             box-shadow: 1px 5px 2px #edf3fc;
-            height: 130px;
+            height: 135px;
         }
         .hosting__infos p {
             text-align: left;
@@ -380,8 +399,9 @@ footer {
             width: 300px;
             height: 68px;
         }
-       .hosting__aside {
+        .hosting__aside {
             order: 1;
+            justify-content: space-between;
         }
         .hosting__aside__legend {
             width: 160px;
@@ -389,18 +409,25 @@ footer {
         .hosting__aside__legend h4 {
             margin: 0 14px 0 0;
         }
-        .search_Result {
-            padding-left: 10px;
+        section {
+            margin-left: 0;
+            margin-right: 0;
         }
         #interests {
             margin-right: 0;
             margin-bottom: 0;
         }
+        .activities__block3 {
+            justify-content: center;
+        }
+        .activities__block2 {
+            justify-content: center;
+            flex-direction: row; 
+        }
         .activities__card__large, .activities__card__medium, .activities__card__small {
             width: 300px;
             height: 130px;
-            margin-bottom: 20px;
-            margin-right: 0;
+            margin: 0 10px 20px 10px;
         }  
         .activities__card__large img, .activities__card__medium img, .activities__card__small img {
             width: 300px;
@@ -414,7 +441,7 @@ footer {
         }
 }
 
-@media all and (min-width: 426px) and (max-width: 1024px) 
+@media all and (min-width: 744px) and (max-width: 1243px) 
 {
     .header nav {
         width: 60%;
@@ -422,7 +449,7 @@ footer {
     .search__form__search__input {
         width: 30%;
     }
-    .search__nav__list, #accommodation, aside, .hosting__aside__legend {
+    #accommodation, aside, .hosting__aside__legend {
         width: 100%;
     }
     .search__nav__list {
@@ -436,16 +463,6 @@ footer {
     .hosting__aside {
         order: 1;
 }
-    .hosting {
-        width: 90%;
-        padding-left: 40px;
-    }
-    aside {
-        margin-bottom: 20px;
-    }
-    .hosting__aside__view {
-        flex-wrap: nowrap;
-    }
     .hosting__aside__view h3 {
         margin: 0 0 0 5px;
         font-size: 17px;
@@ -454,14 +471,22 @@ footer {
         margin: 5px 20px 5px 0;
     }
     .hosting__aside__legend p {
-       margin: 0 0 25px 0;
+       margin: 0 0 35px 0;
+    }
+    .hosting__aside__legend {
+        width: 180px;
+        height: 130px;
     }
     .hosting__aside__infos {
-        margin: 0; 
-        width: 90%;
+        width: 300px;
+        margin: 20px;
     }
     .hosting__aside__infos img {
         width: 26%;
+    }
+    .activities__block3 {
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
     .activities__card__large {
         height: 280px;
