@@ -294,7 +294,7 @@ footer {
     padding: 20px 40px 40px 40px; 
     width: 100%;
 }
-#index {
+.index {
     display: flex;
     flex-wrap: nowrap;
 }
@@ -433,7 +433,7 @@ footer {
             width: 300px;
             height: 80px;
         }
-        footer #index  {
+        footer .index  {
             flex-flow: column wrap;
         }
         footer .menu {
