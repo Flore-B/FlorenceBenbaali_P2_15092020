@@ -13,6 +13,7 @@
 
 body {
     font-family: 'ralewaymedium', Arial, Helvetica, sans-serif;
+   
 }
 h3 {
     font-size: 21px;
@@ -72,7 +73,7 @@ header, .search {
     display: flex;
 }
 .search__form__icon {
-    border: 1px solid #f2f2f2;
+    border: none;
     padding: 11.5px 16px;
     border-radius: 10px 0 0 10px;
 }
@@ -93,7 +94,7 @@ header, .search {
 .search__form__submit__input, .search__form__submit__input__btn {
     background-color: #0065FC;
     border-radius: 0 10px 10px 0;
-    border: 1px solid #0065FC;
+    border: none;
     color: white;
     font-weight: bold;
     font-size: 16px;
@@ -118,7 +119,6 @@ header, .search {
     padding-right: 16px;
     border: 2px solid #d9d9d9;
     border-radius: 20px;
-    font-size: 16px;
 }
 .search__nav ul li a:hover {
     color: #0065FC;
@@ -175,7 +175,7 @@ aside h3 {
 .hosting__infos, .hosting__aside__infos {
     background-color: white;
     border-radius: 20px;
-    border: 5px solid white;
+    padding: 5px;
 }
 .hosting__infos {  
     margin: 0 15px 30px 15px;
@@ -294,8 +294,7 @@ aside {
     margin-left: 10px;
 }
 footer {
-    padding: 20px 40px 40px 40px; 
-    width: 100%;
+    padding: 20px 40px 40px 40px;
 }
 .index {
     display: flex;
@@ -351,6 +350,9 @@ footer {
             border-bottom: 2px solid #0065FC;
             padding: 0 22px 20px 22px;
         }
+        .search {
+            margin-left: 0;
+        }
         .search__title, .search__output {
             text-align: center;
             margin-top: 20px;
@@ -378,9 +380,6 @@ footer {
             width: 75%;
             flex-direction: column;    
             align-content: center;
-        }
-        .search__nav__item a {
-            font-size: 16px;
         }
         h3 {
             font-size: 19px;
